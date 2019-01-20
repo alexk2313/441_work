@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  height: 100%;
+}
+body{
+  width: 100%;
+}
+
+.img-container {
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/cali.jpg);
+  height: 70%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+}
+
+
+.inner-text {
+  text-align: center;
+  font-size: 70px;
+  position: absolute;
+  width: 100%;
+  color: white;
+  height: auto;
+  margin-top: 200px;
+
+}
+
+ h1 {
+   font-size: 120px;
+  font-family: lucida;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  margin-top: -17px;
+  font-size: 50px;
+  font-family: lucida-sans;
+  text-align: center;
+  font-weight: 20;
+}
+
+.main-container {
+  background-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(172, 171, 31);
+  padding: 100px;
+
+}
+
+p {
+  transform: translateY(-600px);
+  height: auto;
+  text-align: center;
+  font-family: lucida-sans;
+  color: white;
+  font-size: 50px;
+}
