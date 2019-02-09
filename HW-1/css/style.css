@@ -45,6 +45,7 @@ h2 {
 
 .main-container {
   background-color: black;
+  opacity: 50%;
   border-style: solid;
   border-width: 5px;
   border-color: rgb(172, 171, 31);

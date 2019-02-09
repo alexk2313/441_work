@@ -1,0 +1,185 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>The Wizard and the Crow</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" / >
+</head>
+<script>
+
+<!-- Choosing to follow the crow or not -->
+    function getChoice1()
+    {
+      var myChoice = document.getElementById("choice").value;
+      var myQuestion = document.getElementById("question");
+      if(myChoice === "right")
+      {
+          document.getElementById("choice").style.display="none";
+          document.getElementById("btnSubmit").style.display="none";
+
+          document.getElementById("choice2").style.display="block";
+          document.getElementById("btnSubmit2").style.display="block";
+          myQuestion.innerHTML = "You follow the crow into the darkness of the storm. The path gradually declines and you spot a cave. The crow purches at the entrance. Do you enter the cave or follow the path?"
+      }
+      else if(myChoice === "left")
+      {
+          myQuestion.innerHTML = "You decide not to follow the crow and take the left path. The storm intensifies and visibility is decreasing. You realize you have made the wrong choice. Refresh page and try again!"
+      }
+      else
+      {
+          myQuestion.innerHTML = "Invalid Answer"
+      }
+    }
+
+
+
+
+<!-- Choosing to follow the crow into the cave or keep going along the path -->
+    function getChoice2()
+    {
+      var myChoice2 = document.getElementById("choice2").value;
+      var myQuestion = document.getElementById("question");
+      if(myChoice2 === "enter cave")
+      {
+          document.getElementById("choice2").style.display="none";
+          document.getElementById("btnSubmit2").style.display="none";
+
+          document.getElementById("choice3").style.display="block";
+          document.getElementById("btnSubmit3").style.display="block";
+          myQuestion.innerHTML = "You enter the dark cave and find quick shelter from the storm. The crow calls out to you and flys to a small pile of wood with flint next to it, start a fire or dont."
+      }
+      else if(myChoice2 === "follow path")
+      {
+          myQuestion.innerHTML = "You decide not to follow the crow and continue down the path in order to find your own way out of the storm. The storm intensifies and you fall of a cliff while walking through the low visability. YOU DIE! Refresh page to start over"
+      }
+      else
+      {
+          myQuestion.innerHTML = "Invalid Answer"
+      }
+    }
+
+
+    <!-- choice for starting the fire -->
+            function getChoice3()
+            {
+              var myChoice3 = document.getElementById("choice3").value;
+              var myQuestion = document.getElementById("question");
+              if(myChoice3 === "start fire")
+              {
+                  document.getElementById("choice3").style.display="none";
+                  document.getElementById("btnSubmit3").style.display="none";
+
+                  document.getElementById("choice4").style.display="block";
+                  document.getElementById("btnSubmit4").style.display="block";
+                  myQuestion.innerHTML = "You decide to start the fire. The crow take up his spot across from you and his form begins to change. Amazingly the crow has turned into an old dwarf and he asks if you know who he is."
+              }
+              else if(myChoice3 === "dont start fire")
+              {
+                  myQuestion.innerHTML = "You decide not to start the fire and the crow begins to change form. It turns into a hideous beast. The beast mauls you and you die. Refresh page to start over."
+                }
+              else
+              {
+                  myQuestion.innerHTML = "Invalid Answer"
+              }
+            }
+
+            <!-- choice for knowing the dwarf-->
+                    function getChoice4()
+                    {
+                      var myChoice4 = document.getElementById("choice4").value;
+                      var myQuestion = document.getElementById("question");
+                      if(myChoice4 === "yes")
+                      {
+                          document.getElementById("choice4").style.display="none";
+                          document.getElementById("btnSubmit4").style.display="none";
+
+                          document.getElementById("choice5").style.display="block";
+                          document.getElementById("btnSubmit5").style.display="block";
+                          myQuestion.innerHTML = "Oh really now Mr.Wizard? Im quite surprised since this is not the original form you knew me as. How are you sure?"
+                      }
+                      else if(myChoice4 === "no")
+                      {
+                          myQuestion.innerHTML = "You really dont recognize me? We know eachother very well Mr.Wizard! I am you one and only son and i have mastered shape shifting magic! Welcome to my humble abode! Thank me later for saving you. There is a cliff down that path there."
+                        }
+                      else
+                      {
+                          myQuestion.innerHTML = "Invalid Answer"
+                      }
+                    }
+                    <!-- choice for answer -->
+                            function getChoice5()
+                            {
+                              var myChoice5 = document.getElementById("choice5").value;
+                              var myQuestion = document.getElementById("question");
+                              if(myChoice5 === "your magic")
+                              {
+                                  document.getElementById("choice5").style.display="none";
+                                  document.getElementById("btnSubmit5").style.display="none";
+                  
+
+                                  myQuestion.innerHTML = "I am you one and only son and i have mastered shape shifting magic! Welcome to my humble abode! Thank me later for saving you. There is a cliff down that path there."
+                              }
+                              else if(myChoice5 === "intuition")
+                              {
+                                  myQuestion.innerHTML = "I am you one and only son and i have mastered shape shifting magic! Welcome to my humble abode! Thank me later for saving you. There is a cliff down that path there."
+                                }
+                              else
+                              {
+                                  myQuestion.innerHTML = "Invalid Answer"
+                              }
+                            }
+
+
+
+
+
+  </script>
+
+
+
+
+
+<body>
+      <div class="img-container">
+        <div class="inner-text">
+        <h1> The Wizard and the Crow</h1>
+      </div>
+      </div>
+      <div class= "main-container">
+        <div id="question">
+        <pre>
+        The Wizard is wandering down a path through a storm, he is completely lost. Suddenly the path splits to the right and to the left.
+        </pre>
+        <pre>
+        A crow above in the branches seems to becon the man to follow
+        by flying branch to branch and looking back at him. The Crow heads down
+        the right path, looking back at the man. Do you head right or left?
+        </pre>
+        </div>
+
+        <!-- The text box for first option -->
+        <input type="text" size="40" id="choice" Value="please enter right or left">
+        <button id="btnSubmit" onclick="getChoice1();"> continue </button>
+
+        <!-- The text box for second option -->
+        <input type="text" size="40" id="choice2" Value="please enter follow path or enter cave" style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();" style="display:none"> continue </button>
+
+        <!-- The text box for third option -->
+        <input type="text" size="40" id="choice3" Value="please enter start fire or dont start fire" style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none"> continue </button>
+
+
+        <!-- The text box for fourth option -->
+        <input type="text" size="40" id="choice4" Value="please enter yes or no" style="display:none">
+        <button id="btnSubmit4" onclick="getChoice4();" style="display:none"> continue </button>
+
+        <!-- The text box for fifth option -->
+        <input type="text" size="40" id="choice5" Value="please enter your magic or intuition" style="display:none">
+        <button id="btnSubmit5" onclick="getChoice5();" style="display:none"> continue </button>
+
+
+        </div>
+
+    </body>
+</html>
