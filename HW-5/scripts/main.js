@@ -3,7 +3,7 @@ var blankImagePath = "images/card-back.jpg";
 var actualImage = new Array();
 var firstNumber = -1;
 var secondNumber = -1;
-
+var attempts = 0;
 
 var player = {"firstname":"", "lastname":"", "age":"", "numberOfGuesses":""}
 
@@ -57,8 +57,9 @@ function flipImage(number){
     if(actualImage[secondNumber] != actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
         setTimeout(imagesDisappear, 1000);
   /* trying to add numberOfGuesses addition
-        var attempts =
-        localStorage.setItem("playerInfo", JSON.stringify(player));
+          var  attempts = document.getElementById("txtguesses").value;
+          player.numberOfGuesses = attempts + 1;
+
         */
     }
     else if(actualImage[secondNumber] == actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
