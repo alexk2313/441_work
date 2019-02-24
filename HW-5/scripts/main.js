@@ -28,7 +28,7 @@ function createRandomImageArray(){
 
     var randomNumber = Math.floor(Math.random() * actualImagePath.length)
 
-    if(count[randomNumber] < 5)
+    if(count[randomNumber] < 2)
       {
       actualImage.push(actualImagePath[randomNumber]);
       count[randomNumber] = count[randomNumber] + 1;
@@ -56,6 +56,10 @@ function flipImage(number){
     //check to see if images dont match
     if(actualImage[secondNumber] != actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
         setTimeout(imagesDisappear, 1000);
+  /* trying to add numberOfGuesses addition
+        var attempts =
+        localStorage.setItem("playerInfo", JSON.stringify(player));
+        */
     }
     else if(actualImage[secondNumber] == actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
       firstNumber = -1;
@@ -98,20 +102,14 @@ function addToPlayer(){
 }
 
 
-//displaying player info on final page (Ask for help about this)
+/*displaying player info on final page (Ask for help about this)
 
-
-
-function playerInfo(){
-    var playerInformation = localStorage.getItem("playerInfo");
-    player = JSON.parse(playerInformation);
-}
 
 
 function getPlayerInformation()
 {
     var information = localStorage.getItem("player");
-    document.getElementById("plaerInfo").innerHTML = "<h1>" + JSON.parse(information).car + "</h1>";
+    document.getElementById("playerInfo").innerHTML = "<h1>" + JSON.parse(player).car + "</h1>";
 }
 
 
@@ -120,3 +118,4 @@ function goNextPage()
 {
     window.location = "matchingfinalpage.html";
 }
+*/
