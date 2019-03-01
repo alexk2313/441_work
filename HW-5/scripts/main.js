@@ -46,7 +46,7 @@ function flipImage(number){
     if(firstNumber >= 0){
       secondNumber = number;
       document.getElementById(imageTags[number]).src = actualImage[secondNumber];
-      setTimeout(imagesDisappear, 1000);
+
     }
     else if(firstNumber < 0) //make first image appear
     {
@@ -56,13 +56,16 @@ function flipImage(number){
     //check to see if images dont match
     if(actualImage[secondNumber] != actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
         setTimeout(imagesDisappear, 1000);
-  /* trying to add numberOfGuesses addition
-          var  attempts = document.getElementById("txtguesses").value;
-          player.numberOfGuesses = attempts + 1;
 
-        */
-    }
-    else if(actualImage[secondNumber] == actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
+
+  //trying to add numberOfGuesses addition and store in localStorage
+
+          player.numberOfGuesses = attempts + 1;
+          localStorage.setItem("playerInfo", JSON.stringify(player));
+          console.log(player.numberOfGuesses);
+      }
+
+     else if(actualImage[secondNumber] == actualImage[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
       firstNumber = -1;
       secondNumber = -1;
     }
@@ -101,22 +104,21 @@ function addToPlayer(){
   window.location = "matching.html";
 
 }
+//trying to get the items out of local storage to use in the final page
+function playerInfo(){
+  var playerInformation = localStorage.getItem("playerInfo");
+  player = JSON.parse(playerInformation);
+  console.log(player.firstname);
+  console.log(player.lastname);
+  console.log(player.age);
+  console.log(player.numberOfGuesses);
+
+  document.getElementById("playerInfo").innerHTML = "<h1>" + JSON.parse(playerInformation).player + "</h1>";
 
 
-/*displaying player info on final page (Ask for help about this)
-
-
-
-function getPlayerInformation()
-{
-    var information = localStorage.getItem("player");
-    document.getElementById("playerInfo").innerHTML = "<h1>" + JSON.parse(player).car + "</h1>";
 }
-
-
-
-function goNextPage()
+//go to final page
+function finalPage()
 {
     window.location = "matchingfinalpage.html";
 }
-*/
