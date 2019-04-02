@@ -1,0 +1,1 @@
+{"pc":{"label":"PC","count":4935,"peak24":8078},"xone":{"label":"XBOXONE","count":4298,"peak24":6532},"ps4":{"label":"PS4","count":5822,"peak24":7156}}

@@ -1,0 +1,17 @@
+[
+{
+      "platform" : "PC",
+      "players" : "4935",
+      "peak" : "8078"
+    },
+    {
+      "platform" : "XboxOne",
+      "players" : "4298",
+      "peak" : "6532"
+    },
+    {
+      "platform" : "PS4",
+      "players" : "5822",
+      "peak" : "7156"
+    }
+]
