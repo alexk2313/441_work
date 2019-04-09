@@ -80,6 +80,7 @@ var square2 = new Square(undefined, undefined, 0, 0, 100, 100, "rgb(0, 0, 0)")
 
 
 //********* animation **************
+
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0,0, innerWidth, innerHeight);
