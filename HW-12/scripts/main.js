@@ -9,6 +9,7 @@ var mouse ={
 var maxRadius = 100;
 var minRadius = 20;
 
+
 //********* adding mouse functionablity****
 canvas.addEventListener('mousemove', function(event){
       mouse.x = event.x;
@@ -71,7 +72,7 @@ function Circle(x, y, dx, dy, radius, color) {
 
 
   var circle1 = new Circle(x, y, dx, dy, radius, "rgb(0, 255, 25)");
-  var circle2 = new Circle(30,30, 0, 0, radius, "rgb(255, 252, 0)");
+  var circle2 = new Circle(30,30, 0, 0, radius, "rgb(255, 255, 255)");
 
 
 
@@ -96,10 +97,12 @@ function animate() {
     if(circle1.radius < maxRadius){
       circle1.color = "rgb(0, 0, 0)";
       circle1.radius += 1;
+      document.body.style.background = "rgb(0, 255, 25)";
     }
   } else if (circle1.radius > minRadius){
-    circle1.color = "rgb(0, 255, 25)"
+    circle1.color = "rgb(0, 255, 25)";
     circle1.radius -= 1;
+    document.body.style.background = "rgb(0, 0, 0)";
   }
 
 }
