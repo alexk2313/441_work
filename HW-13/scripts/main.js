@@ -122,7 +122,7 @@ function drawSquare(){
   ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
 
   for(var i = 0; i < squareArray.length; i++){
-    ctx.fillstyle = squareArray[i].mainColor;
+    ctx.fillStyle = squareArray[i].mainColor;
     ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
     }
 
